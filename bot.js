@@ -99,7 +99,7 @@ client.on('message', async msg => {
 	let command = msg.content.toLowerCase().split(" ")[0];
 	command = command.slice(prefix.length)
 
-	if (command === `play`) {
+	if (command === `p`) {
 		const voiceChannel = msg.member.voiceChannel;
         
         if (!voiceChannel) return msg.channel.send("انت لم تدخل روم صوتي");
@@ -179,7 +179,7 @@ client.on('message', async msg => {
             
         }
         
-	} else if (command === `skip`) {
+	} else if (command === `s`) {
 
 		if (!msg.member.voiceChannel) return msg.channel.send("يجب ان تكون في روم صوتي");
         if (!serverQueue) return msg.channel.send("ليست هناك اغاني ليتم التخطي");
@@ -187,7 +187,7 @@ client.on('message', async msg => {
 		serverQueue.connection.dispatcher.end('تم تخطي الاغنية');
         return undefined;
         
-	} else if (command === `stop`) {
+	} else if (command === `s`) {
 
 		if (!msg.member.voiceChannel) return msg.channel.send("يجب ان تكون في روم صوتي");
         if (!serverQueue) return msg.channel.send("There is no Queue to stop!!");
@@ -349,8 +349,9 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`!play | Last Music`,"http://twitch.tv/ShAnKs")
+client.user.setGame(`!play | By ShAnKs`,"http://twitch.tv/ShAnKs")
 client.user.setStatus("dnd")
 });
 
 client.login(process.env.BOT_TOKEN);
+
