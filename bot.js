@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "2";
+const prefix = "!";
 /////////////////////////
 ////////////////////////
 
@@ -349,20 +349,9 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`1play | By ShAnKs`,"http://twitch.tv/ShAnKs")
+client.user.setGame(`!play | By ShAnKs`,"http://twitch.tv/ShAnKs")
 client.user.setStatus("dnd")
 });
 
 client.login(process.env.BOT_TOKEN);
 
-
-client.on('ready', () => {
-   console.log(`----------------`);
-      console.log(`Desert Bot- Script By : EX Clan`);
-        console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
-    console.log(`----------------`);
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Music By ShAnKs`,"http://twitch.tv/ShAnKs")
-client.user.setStatus("dnd")
-});
